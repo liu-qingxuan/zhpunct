@@ -31,5 +31,9 @@
 \NewDocumentCommand{\ellipsis}{s}{%
 \makebox[2em]{\IfBooleanTF{#1}{……}{⋯⋯}}%
 }
-
-\newcommand{\interpunct}{\makebox[1em]{·}}
+\NewDocumentCommand{\connector}{s}{%
+\makebox[1em]{\IfBooleanTF{#1}{～}{–}}%
+}
+\NewDocumentCommand{\interpunct}{s}{%
+\makebox[\IfBooleanTF{#1}{0.5em}{1em}]{·}%
+}
